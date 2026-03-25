@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="styles\generalstyles.css">
+
+<title>Joey gliders</title>
+
+<script language="JavaScript">
+
+function popup(FILE, FEATURES) { 
+    CONTENT = "<HTML><HEAD><TITLE>Enlarged image</TITLE></HEAD>" +
+              "<BODY><CENTER><FORM><INPUT TYPE='BUTTON' VALUE='Close'" +
+               "onClick='window.close()'></FORM><P><IMG SRC='" + FILE + 
+               "' BORDER=0>" + "</CENTER>"+ "</BODY></HTML>";
+              pop = window.open("","",FEATURES);
+              pop.document.open();
+              pop.focus();
+              pop.document.write(CONTENT);
+              pop.document.close();
+
+} 
+
+
+function view (imagefile) { 
+   var winShell
+   var atext, btext, ctext;
+   var fso;
+   var quoteS = String.fromCharCode(34);
+
+   atext=self.location.href; // the current page path
+   fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   btext = fso.GetParentFolderName(atext); // path without the page name
+   delete(fso);
+
+   atext = quoteS + "\\" + btext + exefile  + quoteS; // add the image relative path and put in quotes
+   atext = atext.replace( /\//g, '\\' ); // make sure the slashes are the right way round
+   ctext = "btext = " + btext + " atext = " + atext;
+   // alert(ctext);
+
+   atext = "rundll32.exe %SystemRoot%\system32\shimgvw.dll,ImageView_Fullscreen";
+   // add the image path
+   atext = atext + "\\" + imagefile;
+   alert(text);
+
+   // Run the given executable
+   winShell = new ActiveXObject("WScript.Shell");
+   // winShell.Run(atext);
+   delete(winShell);
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+<p style="text-align:center;">NOTE: THIS WEBSITE IS ONLY FOR TESTING<br>
+AND WILL BE HOSTED ELSEWHERE ONCE THE TESTS ARE COMPLETED.<br>
+</p>
+
+
+<br>
+<H1><CENTER>THE JOEY</CENTER></H1>
+
+<center>
+<a href="IMAGES/joey_1_X4_C.jpg">
+<img  src="IMAGES/joey_1_X4_C.jpg" width=640 ALT="Joey J1">
+</a>
+</center>
+
+<p style="text-align:center;">The Joey was designed and built by Keith Jarvis in Adelaide.<br>Between 1954 and 1970 he built three versions of the glider.
+</p>
+
+<br>
+
+<!--
+<iframe
+    id="vimeo-player"
+	src = "https://player.vimeo.com/video/128255160#t=225s"
+    width="640"
+    height="360"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  const START = 225; // 3:45 in seconds
+  const END = 319;   // 5:19 in seconds
+
+  const iframe = document.getElementById('vimeo-player');
+  const player = new Vimeo.Player(iframe);
+
+  player.on('timeupdate', function(data) {
+    if (data.seconds >= END) {
+      // Jump back to start
+      player.setCurrentTime(START);
+    }
+  });
+
+  // Optional: start playback automatically
+  player.setCurrentTime(START).then(() => player.play());
+</script>
+-->
+
+
+
+
+<h2 id="section1">The first Joey</h2>
+
+<center>
+<figure>
+<a href="IMAGES/Joey_1_pic.jpg">
+<img  src="IMAGES/Joey_1_pic.jpg" width=60% ALT="Joey J1">
+</a>
+<figcaption>
+<br>The first of the Joeys, the "J1"
+</figcaption>
+</figure>
+</center>
+
+<!--
+<a href="IMAGES/Gliding-Years.jpg">
+<img  src="IMAGES/Gliding-Years.jpg" width=128 ALT="The gliding years">
+</a>
+
+-->
+
+<article class="article-content">
+
+<p>
+Keith built the <a href="Gliding-Years.html#section1" target="_blank">first of the Joeys</a> in a small backyard shed at Torrens Park in Adelaide between 1950 and 1954. It was completed in 1955 weighing just 135 lb empty. Wing area 80 sq ft, max speed 70 kts, stalling speed 25 kts, best glide 1/24, min sink 2.48 fps. <a href="Gliding-Years.html#section3" target="_blank">First flight</a> was on January 11th, 1955 at Gawler, South Australia.
+<br>
+</p>
+
+<div style="text-align:center;">
+
+<a href="IMAGES/joey-2_gawler.jpg">
+<img  src="IMAGES/joey-2_gawler.jpg" width=40% alt="Joey Gawler">
+</a>
+
+<a href="IMAGES/joey_2_X4.jpg">
+<img  src="IMAGES/joey_2_X4.jpg" width=40% alt="Joey 1">
+</a>
+
+</div>
+
+</article>
+
+
+<!-- <div class="image-row"> -->
+<article class="article-content">
+
+<a href="IMAGES/NEWS_1955-2.jpg">
+<img  src="IMAGES/NEWS_1955-2.jpg" width=50% alt="NEWS 1955.jpg" class="wrap-img">
+</a>
+
+<a href="IMAGES/joey-2_gawler.jpg">
+<img  src="IMAGES/joey-2_gawler.jpg" width=50% alt="Joey Gawler" class="wrap-img">
+</a>
+
+<!--
+<a href="IMAGES/shouldering-the-joey.jpg">
+<img  src="IMAGES/shouldering-the-joey.jpg" width=50% alt="shouldering-the-joey" class="wrap-img">
+</a>
+-->
+<a href="IMAGES/joey_air2air_gawler.jpg">
+<img  src="IMAGES/joey_air2air_gawler.jpg" width=50% alt="Joey air to air" class="wrap-img">
+</a>
+
+</article
+
+<br><br>
+
+<p>
+<center>
+<a href="IMAGES/Sellicks-Hill_Google-Earth_2.JPG">
+<img  src="IMAGES/Sellicks-Hill_Google-Earth_2.JPG" width=60% alt="Sellicks flight"
+</a>
+</center>
+</p>
+
+<article class="article-content">
+<a href="IMAGES/Joey-Sellicks-Flight_300_PI.jpg">
+<img  src="IMAGES/Joey-Sellicks-Flight_300_PI.jpg" width=30% alt="Sellicks flight"  class="wrap-img">
+</a>
+<p>
+On April 13 1956, in an attempt to better and endurance record, the glider was hand launched at Sellicks Hill south of Adelaide in gale conditions. The drawing at right shows notes of conditions and the path of the flight.
+<br><br><br>
+
+JOEY SAILPLANE - K JARVIS<br>
+SELLICKS HILL<br>
+SLOPE SOARING  GALE FORCE WIND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hand launch by 2 persons<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warabari Sea Hill<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very slow ground speed at 70mph <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rain squall, stationary at 65mph. Gusts up to 80mph. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drifted back to hill <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Squall passed <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Over hill, second squall 60-70mph <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cleared hill <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Near cloudbase above low cloud <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slow headway <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Landed 2 miles upwind
+</p>
+</article>
+
+<p style="text-align:center;">
+Details of the flight were published in the Adelaide Advertiser newspaper on 13th June 1956.
+</p>
+<center>
+<a href="IMAGES/Joey_Record_Bid.png">
+<img  src="IMAGES/Joey_Record_Bid.png" width=30% alt="Record bid">
+</a>
+</center>
+<br><br>
+<p>
+
+<p>
+Another memorable event occurred in the late 1950s as related by his son, Ian.
+<br><br>
+<i>
+Keith flew the Joey from Gawler on a whim across the city of Adelaide. He climbed to 10,000 feet and felt confident with cumulus ahead, but lost height nearing the coast and found himself at 1,000 feet eyeing Morphettville Racecourse during a race. Fortunately, he caught another thermal and continued.</i>
+<br><br>
+A flight from Gawler to Sellicks beach is <a href="Gliding-Years.html#best-flights" target="_blank">logged</a> :<br>
+Feb 29 '56,	Gawler to Sellicks beach, height 8500, 250 minutes.
+</p>
+
+<br><br>
+
+<h2 id="section2">The second Joey</h2>
+
+<center>
+<figure>
+<a href="IMAGES/j2_1_X2.jpg">
+<img  src="IMAGES/j2_1_X2.jpg" width=60% ALT="Joey J2">
+</a>
+<figcaption>
+<br>The second Joey, the "J2"</figcaption>
+</figure>
+
+
+<article class="article-content">
+
+<a href="IMAGES/plympton_shed.jpg">
+<img  src="IMAGES/plympton_shed.jpg" width=30% alt="Plympton shed" class="wrap-img">
+</a>
+
+<br>
+
+<p> The second Joey, the "J2", was built in a slightly larger shed at Plympton Park in 1968.
+<br><br>
+This had a one-piece cantilever wing, weighed 140 lbs and included a landing drag chute deployed from a tube inside the rear of the fuselage by a soda siphon CO2 cartridge activated from the cockpit. Short test flights were made at Gawler. 
+<br><br>
+Unfortunately, despite having obtained a comprehensive stress analyis, Keith was unable to obtain approval for the design from the authority at the time, the "DCA" (Department of Civil Aviation) and after waiting more than 6 months he abandoned the project.
+<br>
+</p>
+
+<br><br>
+
+</article>
+
+<h2 id="section1">The third Joey</h2>
+
+<center>
+<figure>
+<a href="IMAGES/joey_3_X2.jpg">
+<img  src="IMAGES/joey_3_X2.jpg" width=60% ALT="Joey J3" >
+</a>
+<figcaption>
+<br>The third Joey, the "J3"</figcaption>
+</figure>
+
+<p>
+The third Joey VH-GNJ, an improved version of J1, was built around 1970 based on the existing approved strut braced design from the wings and tailplane of the J2 project. Weight 140lbs. First flight 11th November 1971.
+<br><br>
+On one occasion in the 1980's during a hang-glider competion in Burra, north of Adelaide, the glider was again hand-launched and Keith slope soared together with the hang gliders.
+<br><br>
+
+<div style="text-align:center;">
+<a href="IMAGES/joey_hgilder_X2_1920_PI.jpg">
+<img  src="IMAGES/joey_hgilder_X2_1920_PI.jpg" width=40% alt="Joey and hang gliders">
+</a>
+<a href="IMAGES/joey_hgilder_2_X2_1920_PI.jpg">
+<img  src="IMAGES/joey_hgilder_2_X2_1920_PI.jpg" width=40% alt="Joey and hang gliders">
+</a>
+</div>
+
+<br><br>
+
+<p style="text-align:center;">
+The following video, created from 8mm film, records the event at Burra<br>and shows the hand launch, even though the quality is low.
+</p>
+
+
+<video width=40% controls>
+  <source src="VIDEO/Joey_Burra_hqX2_640_x265_motion.mp4" type="video/mp4">
+</video>
+
+<br><br><br>
+
+<p>
+The glider was later fitted with a pylon mounted, converted 160cc Victa motor mower engine and registered with the RAAus in the 95:10 ultralight category. This proved quite successful with a good take-off and climb with a light pilot. Static thrust 55lbs, cruise 50kts. First flight was  7th April 1980.
+<br><br>
+Keith flew it frequently during the 1980s and 1990s. The following video contains film taken at a flyin at Aldinga Airfield in 1982. It is part of a <a href="https://player.vimeo.com/video/128255160?autoplay=0" target="_blank">longer slideshow video</a> of Keith's aircraft.
+</p>
+
+<video width=60% controls>
+  <source src="VIDEO/Joey-Aldinga-Flyin_1280_x265.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<p style="text-align:center;">
+A more recent film of local flying at the Noarlunga airfield shows the manouverability of the Joey.
+</p>
+
+<video width=50% controls>
+  <source src="VIDEO/Joey-flying_hqX2_640_x265.mp4" type="video/mp4">
+</video>
+
+<br><br><br>
+
+<p>
+In 1978, Keith arranged to depart Adelaide Airport in order to perform a display over the Glenelg "Birdman Rally", a competition for the longest flight foot launched from the Genelg Jetty into the water. The following photo shows the Joey being rigged with a commercial aircraft in the near background.
+</p>
+<a href="IMAGES/rigging-adelaide-airport.jpg">
+<img  src="IMAGES/rigging-adelaide-airport.jpg" width=60% alt="Rigging on the tarmac">
+</a> 
+
+<p style="text-align:center;">
+A newspaper article shows a similar photo of the glider fully rigged.
+</p>
+
+<a href="IMAGES/Doing-it-himself.jpg">
+<img  src="IMAGES/Doing-it-himself.jpg" width=45% alt="Doing it himself">
+</a> 
+<br><br>
+
+
+<p>
+
+In the mid to late 80's the Joey was returned to the workshop for inspection and possible renovation as the Newsletter of the Vintage Glider Association of Australia in 1987 describes -
+<br><br>
+KEITH JARVIS WORKING ON OVERHAUL OF JOEY
+<br><br>
+Keith Jarvis of Adelaide has been very active in ultra-light aircraft activities for the past five or six years but now says "I have built my last one". A lot of his flying during these years	has	been in the diminutive Joey sailplane that he designed and built back in the 1950s. Most of this has been with a small engine fitted to the Joey and operating as an ultra light powered aircraft. Keith and his son Lynn have begun a major overhaul of Joey including recovering all the fabric parts. "So far," he comments, "we have found the structure quite sound despite some of it being made with urea glue." Keith is thinking of re-placing the original Victa motor with a McCulloch 100 cc motor to get more thrust. "If this works successfully I may rework the Joey fuselage to allow to motor to be re-tracted in flight," he says.
+</p>
+
+<br>
+
+<h2 id="section1">Other gliders</h2>
+
+<p style="text-align:center;">
+Other gliders were built based on the design of the Joey.
+</p>
+<br>
+<a href="IMAGES/the-jumbuck.jpg">
+<img  src="IMAGES/the-jumbuck.jpg" width=45% alt="The Jumbuck">
+</a> 
+
+<p style="text-align:center;">
+From 1955 to 1957 Kevin Sedgman (left) built the <a href="Gliding-Years.html#section11" target="_blank">'Jumbuck'</a> to Keith's revised design of the Joey.<br>
+First flights were in Oct 9th 1957. Kevin was noted for his performances and aerobatics in it. 
+</p>
+<br>
+<a href="IMAGES/spruce-goose.jpg">
+<img  src="IMAGES/spruce-goose.jpg" width=60% alt="The Spruce Goose">
+</a> 
+<p style="text-align:center;">
+Ted Pascoe's design the EP1 <a href="Gliding-Years.html#section14" target="_blank">'Spruce Goose'</a>.<br>
+Ted and Keith started building and encouraging each other<br>
+when they were both stationed at Parafield in 1963. 
+</p>
+
+<br><br><br>
+
+</body>
+
+</html>
