@@ -1,228 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>RAAF Flight Log</title>
-   
-  <script src="../js/page-flip.browser.js"></script>
-  
-  <style>
-    body {
-      margin: 0;
-      background: #f0f0f0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
 
-    #book-container {
-      width: 90vw;
-      max-width: 800px; // x2 400 pix
-	  height: 410px;
-      margin-top: 20px;
-    }
+<!-- allows embedding in most modern browsers. -->
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors *">
 
-    #book {
-      width: 100%;
-      height: 100%;
-    }
+<link rel="stylesheet" type="text/css" href="../../styles/generalstyles.css">
 
-    .page {
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<title>Flying Log Book</title>
 
-    .page img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+<script language="JavaScript">
 
-    #controls {
-      margin-top: 10px;   /* small space below pages */
-      text-align: center; /* center buttons & input */	  
-    }
-	
-    #controls button {
-	  padding: 5px 10px; /* smaller padding */
-      font-size: 14px;   /* smaller text */
-      margin: 0 5px;     /* smaller gaps between buttons */
-      cursor: pointer;   /* keeps pointer */
-    }
-	
-	#controls span,
-    #controls input {
-      font-size: 14px;
-    }
+function popup(FILE, FEATURES) { 
+    CONTENT = "<HTML><HEAD><TITLE>Enlarged image</TITLE></HEAD>" +
+              "<BODY><CENTER><FORM><INPUT TYPE='BUTTON' VALUE='Close'" +
+               "onClick='window.close()'></FORM><P><IMG SRC='" + FILE + 
+               "' BORDER=0>" + "</CENTER>"+ "</BODY></HTML>";
+              pop = window.open("","",FEATURES);
+              pop.document.open();
+              pop.focus();
+              pop.document.write(CONTENT);
+              pop.document.close();
 
-    #controls input {
-	  width: 60px; // Input box width
-      padding: 2px 4px;
-    }
-	
+} 
 
-    button {
-      padding: 10px 20px;
-      margin: 0 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-	
-  </style>
+
+function view (imagefile) { 
+   var winShell
+   var atext, btext, ctext;
+   var fso;
+   var quoteS = String.fromCharCode(34);
+
+   atext=self.location.href; // the current page path
+   fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   btext = fso.GetParentFolderName(atext); // path without the page name
+   delete(fso);
+
+   atext = quoteS + "\\" + btext + exefile  + quoteS; // add the image relative path and put in quotes
+   atext = atext.replace( /\//g, '\\' ); // make sure the slashes are the right way round
+   ctext = "btext = " + btext + " atext = " + atext;
+   // alert(ctext);
+
+   atext = "rundll32.exe %SystemRoot%\system32\shimgvw.dll,ImageView_Fullscreen";
+   // add the image path
+   atext = atext + "\\" + imagefile;
+   alert(text);
+
+   // Run the given executable
+   winShell = new ActiveXObject("WScript.Shell");
+   // winShell.Run(atext);
+   delete(winShell);
+}
+
+</script>
+
 </head>
 
 <body>
 
-  <div id="book-container">
-    <div id="book">
-      <div class="page"><img src="../images/BOOK-1/page-01.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-02.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-03.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-04.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-05.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-06.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-07.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-08.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-09.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-10.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-11.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-12.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-13.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-14.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-15.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-16.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-17.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-18.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-19.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-20.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-21.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-22.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-23.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-24.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-25.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-26.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-27.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-28.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-29.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-30.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-31.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-32.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-33.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-34.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-35.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-36.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-37.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-38.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-39.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-40.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-41.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-42.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-43.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-44.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-45.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-46.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-47.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-48.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-49.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-50.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-51.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-52.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-53.jpg"></div>
-      <div class="page"><img src="../images/BOOK-1/page-54.jpg"></div>
-    </div>
-  </div>
-  
-  <div id="controls">
-    <button id="start"><<</button>
-    <button id="prev">Previous</button>
-    <button id="next">Next</button>
-    <button id="end">>></button>
-    <br>
-	<center>
-    <span id="pageInfo">Page 1 of 54</span>
-    <br>
-    <input type="number" id="pageInput" min="1" placeholder="Page">
-    <button id="goPage">Go</button>	
-	</center>
-  </div>  
-  
+<br>
 
-  <script>
-    const pageFlip = new St.PageFlip(document.getElementById("book"), {
-      width: 400,
-      height: 410,
-      maxWidth: 600,
-      maxHeight: 650,
-      size: "fixed",
-      showCover: false,
-      useMouseEvents: false, // disables page curl
-      flippingTime: 400,
-      drawShadow: false,
-      mobileScrollSupport: true
-    });
+<center>
 
-    pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+<H1>Flying Log Book<br>1952 to 1971</H1>
 
-    document.getElementById("next").addEventListener("click", () => {
-      pageFlip.flipNext();
-    });
+<br>
+<h3>Page 1-2</h3>
+<a href="../images/BOOK-1/page-01-02.jpg">
+<img  src="../images/BOOK-1/page-01-02.jpg" width=90% ALT="Page 01-02">
+</a>
 
-    document.getElementById("prev").addEventListener("click", () => {
-      pageFlip.flipPrev();
-    });
-	
-    document.getElementById("start").addEventListener("click", () => {
-      pageFlip.flip(0);
-    });
+<br>
+<h3>Page 3-4</h3>
+<a href="../images/BOOK-1/page-03-04.jpg">
+<img  src="../images/BOOK-1/page-03-04.jpg" width=90% ALT="Page 04-04">
+</a>
 
-    document.getElementById("end").addEventListener("click", () => {
-      const lastPage = pageFlip.getPageCount() - 1;
-      pageFlip.flip(lastPage);
-    });
-	
-	// Arrow keys
-    document.addEventListener("keydown", (event) => {
-      switch (event.key) {
-        case "ArrowRight": // Right arrow → next page
-          pageFlip.flipNext();
-          break;
-        case "ArrowLeft": // Left arrow → previous page
-          pageFlip.flipPrev();
-          break;
-        case "Home":       // Home → first page
-          pageFlip.flip(0);
-          event.preventDefault();
-          break;
-        case "End":        // End → last page
-          const lastPage = pageFlip.getPageCount() - 1;
-          pageFlip.flip(lastPage);
-          event.preventDefault();
-          break;		  
-      }
-    });	
-	
-	function updatePageInfo() {
-      const current = pageFlip.getCurrentPageIndex() + 1;
-      const total = pageFlip.getPageCount();
-      document.getElementById("pageInfo").textContent =
-        `Page ${current} of ${total}`;
-    }
+<br>
+<h3>Page 5-6</h3>
+<a href="../images/BOOK-1/page-05-06.jpg">
+<img  src="../images/BOOK-1/page-05-06.jpg" width=90% ALT="Page 05-06">
+</a>
 
-    pageFlip.on("flip", updatePageInfo);
-    updatePageInfo();
-	
-	document.getElementById("goPage").addEventListener("click", () => {
-      const page = parseInt(document.getElementById("pageInput").value);
-      const total = pageFlip.getPageCount();
-      if (page >= 1 && page <= total) {
-        pageFlip.flip(page - 1);
-      }
-    });
-	
-  </script>
+<br>
+<h3>Page 7-8</h3>
+<a href="../images/BOOK-1/page-07-08.jpg">
+<img  src="../images/BOOK-1/page-07-08.jpg" width=90% ALT="Page 07-08">
+</a>
+
+<br>
+<h3>Page 9-10</h3>
+<a href="../images/BOOK-1/page-09-10.jpg">
+<img  src="../images/BOOK-1/page-09-10.jpg" width=90% ALT="Page 09-10">
+</a>
+
+<br>
+<h3>Page 11-12</h3>
+<a href="../images/BOOK-1/page-11-12.jpg">
+<img  src="../images/BOOK-1/page-11-12.jpg" width=90% ALT="Page 11-12">
+</a>
+
+<br>
+<h3>Page 13-14</h3>
+<a href="../images/BOOK-1/page-13-14.jpg">
+<img  src="../images/BOOK-1/page-13-14.jpg" width=90% ALT="Page 13-14">
+</a>
+
+<br>
+<h3>Page 15-16</h3>
+<a href="../images/BOOK-1/page-15-16.jpg">
+<img  src="../images/BOOK-1/page-15-16.jpg" width=90% ALT="Page 15-16">
+</a>
+
+<br>
+<h3>Page 17-18</h3>
+<a href="../images/BOOK-1/page-17-18.jpg">
+<img  src="../images/BOOK-1/page-17-18.jpg" width=90% ALT="Page 17-18">
+</a>
+
+<br>
+<h3>Page 19-20</h3>
+<a href="../images/BOOK-1/page-19-20.jpg">
+<img  src="../images/BOOK-1/page-19-20.jpg" width=90% ALT="Page 19-20">
+</a>
+
+<br>
+<h3>Page 21-22</h3>
+<a href="../images/BOOK-1/page-21-22.jpg">
+<img  src="../images/BOOK-1/page-21-22.jpg" width=90% ALT="Page 21-22">
+</a>
+
+<br>
+<h3>Page 23-24</h3>
+<a href="../images/BOOK-1/page-23-24.jpg">
+<img  src="../images/BOOK-1/page-23-24.jpg" width=90% ALT="Page 23-24">
+</a>
+
+<br>
+<h3>Page 25-26</h3>
+<a href="../images/BOOK-1/page-25-26.jpg">
+<img  src="../images/BOOK-1/page-25-26.jpg" width=90% ALT="Page 25-26">
+</a>
+
+<br>
+<h3>Page 27-28</h3>
+<a href="../images/BOOK-1/page-27-28.jpg">
+<img  src="../images/BOOK-1/page-27-28.jpg" width=90% ALT="Page 27-28">
+</a>
+
+<br>
+<h3>Page 29-30</h3>
+<a href="../images/BOOK-1/page-29-30.jpg">
+<img  src="../images/BOOK-1/page-29-30.jpg" width=90% ALT="Page 29-30">
+</a>
+
+<br>
+<h3>Page 31-32</h3>
+<a href="../images/BOOK-1/page-31-32.jpg">
+<img  src="../images/BOOK-1/page-31-32.jpg" width=90% ALT="Page 31-32">
+</a>
+
+<br>
+<h3>Page 33-34</h3>
+<a href="../images/BOOK-1/page-33-34.jpg">
+<img  src="../images/BOOK-1/page-33-34.jpg" width=90% ALT="Page 33-34">
+</a>
+
+<br>
+<h3>Page 35-36</h3>
+<a href="../images/BOOK-1/page-35-36.jpg">
+<img  src="../images/BOOK-1/page-35-36.jpg" width=90% ALT="Page 35-36">
+</a>
+
+<br>
+<h3>Page 37-38</h3>
+<a href="../images/BOOK-1/page-37-38.jpg">
+<img  src="../images/BOOK-1/page-37-38.jpg" width=90% ALT="Page 37-38">
+</a>
+
+<br>
+<h3>Page 39-40</h3>
+<a href="../images/BOOK-1/page-39-40.jpg">
+<img  src="../images/BOOK-1/page-39-40.jpg" width=90% ALT="Page 39-40">
+</a>
+
+<br>
+<h3>Page 41-42</h3>
+<a href="../images/BOOK-1/page-41-42.jpg">
+<img  src="../images/BOOK-1/page-41-42.jpg" width=90% ALT="Page 41-42">
+</a>
+
+<br>
+<h3>Page 43-44</h3>
+<a href="../images/BOOK-1/page-43-44.jpg">
+<img  src="../images/BOOK-1/page-43-44.jpg" width=90% ALT="Page 43-44">
+</a>
+
+<br>
+<h3>Page 45-46</h3>
+<a href="../images/BOOK-1/page-45-46.jpg">
+<img  src="../images/BOOK-1/page-45-46.jpg" width=90% ALT="Page 45-46">
+</a>
+
+<br>
+<h3>Page 47-48</h3>
+<a href="../images/BOOK-1/page-47-48.jpg">
+<img  src="../images/BOOK-1/page-47-48.jpg" width=90% ALT="Page 47-48">
+</a>
+
+<br>
+<h3>Page 49-50</h3>
+<a href="../images/BOOK-1/page-49-50.jpg">
+<img  src="../images/BOOK-1/page-49-50.jpg" width=90% ALT="Page 49-50">
+</a>
+
+<br>
+<h3>Page 51-52</h3>
+<a href="../images/BOOK-1/page-51-52.jpg">
+<img  src="../images/BOOK-1/page-51-52.jpg" width=90% ALT="Page 51-52">
+</a>
+
+<br>
+<h3>Page 53-54</h3>
+<a href="../images/BOOK-1/page-53-54.jpg">
+<img  src="../images/BOOK-1/page-53-54.jpg" width=90% ALT="Page 53-54">
+</a>
+
+
+</center>
+
+<br><br><br>
 
 </body>
+
 </html>
+
