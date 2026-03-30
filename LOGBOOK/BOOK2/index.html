@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<html>
+
+<head>
+
+<!-- allows embedding in most modern browsers. -->
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors *">
+
+<link rel="stylesheet" type="text/css" href="../../styles/generalstyles.css">
+
+<title>Pilots Log Book</title>
+
+<script language="JavaScript">
+
+function popup(FILE, FEATURES) { 
+    CONTENT = "<HTML><HEAD><TITLE>Enlarged image</TITLE></HEAD>" +
+              "<BODY><CENTER><FORM><INPUT TYPE='BUTTON' VALUE='Close'" +
+               "onClick='window.close()'></FORM><P><IMG SRC='" + FILE + 
+               "' BORDER=0>" + "</CENTER>"+ "</BODY></HTML>";
+              pop = window.open("","",FEATURES);
+              pop.document.open();
+              pop.focus();
+              pop.document.write(CONTENT);
+              pop.document.close();
+
+} 
+
+
+function view (imagefile) { 
+   var winShell
+   var atext, btext, ctext;
+   var fso;
+   var quoteS = String.fromCharCode(34);
+
+   atext=self.location.href; // the current page path
+   fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   btext = fso.GetParentFolderName(atext); // path without the page name
+   delete(fso);
+
+   atext = quoteS + "\\" + btext + exefile  + quoteS; // add the image relative path and put in quotes
+   atext = atext.replace( /\//g, '\\' ); // make sure the slashes are the right way round
+   ctext = "btext = " + btext + " atext = " + atext;
+   // alert(ctext);
+
+   atext = "rundll32.exe %SystemRoot%\system32\shimgvw.dll,ImageView_Fullscreen";
+   // add the image path
+   atext = atext + "\\" + imagefile;
+   alert(text);
+
+   // Run the given executable
+   winShell = new ActiveXObject("WScript.Shell");
+   // winShell.Run(atext);
+   delete(winShell);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<br>
+
+<center>
+
+<H1>Pilots Log Book<br>1975 to 1986</H1>
+
+<br>
+<a href="../images/BOOK-2/page-00-01.jpg">
+<img  src="../images/BOOK-2/page-00-01.jpg" width=90% ALT="Page 01-02">
+</a>
+
+<h3>Page 1-2</h3>
+<a href="../images/BOOK-2/page-01-02.jpg">
+<img  src="../images/BOOK-2/page-01-02.jpg" width=90% ALT="Page 01-02">
+</a>
+
+<br>
+<h3>Page 3-4</h3>
+<a href="../images/BOOK-2/page-03-04.jpg">
+<img  src="../images/BOOK-2/page-03-04.jpg" width=90% ALT="Page 04-04">
+</a>
+
+<br>
+<h3>Page 5-6</h3>
+<a href="../images/BOOK-2/page-05-06.jpg">
+<img  src="../images/BOOK-2/page-05-06.jpg" width=90% ALT="Page 05-06">
+</a>
+
+<br>
+<h3>Page 7-8</h3>
+<a href="../images/BOOK-2/page-07-08.jpg">
+<img  src="../images/BOOK-2/page-07-08.jpg" width=90% ALT="Page 07-08">
+</a>
+
+<br>
+<h3>Page 9-10</h3>
+<a href="../images/BOOK-2/page-09-10.jpg">
+<img  src="../images/BOOK-2/page-09-10.jpg" width=90% ALT="Page 09-10">
+</a>
+
+<br>
+<h3>Page 11-12</h3>
+<a href="../images/BOOK-2/page-11-12.jpg">
+<img  src="../images/BOOK-2/page-11-12.jpg" width=90% ALT="Page 11-12">
+</a>
+
+<br>
+<h3>Page 13-14</h3>
+<a href="../images/BOOK-2/page-13-14.jpg">
+<img  src="../images/BOOK-2/page-13-14.jpg" width=90% ALT="Page 13-14">
+</a>
+
+<br>
+<h3>Page 15-16</h3>
+<a href="../images/BOOK-2/page-15-16.jpg">
+<img  src="../images/BOOK-2/page-15-16.jpg" width=90% ALT="Page 15-16">
+</a>
+
+<br>
+<h3>Page 17-18</h3>
+<a href="../images/BOOK-2/page-17-18.jpg">
+<img  src="../images/BOOK-2/page-17-18.jpg" width=90% ALT="Page 17-18">
+</a>
+
+<br>
+<h3>Page 19-20</h3>
+<a href="../images/BOOK-2/page-19-20.jpg">
+<img  src="../images/BOOK-2/page-19-20.jpg" width=90% ALT="Page 19-20">
+</a>
+
+<br>
+<h3>Page 21-22</h3>
+<a href="../images/BOOK-2/page-21-22.jpg">
+<img  src="../images/BOOK-2/page-21-22.jpg" width=90% ALT="Page 21-22">
+</a>
+
+<br>
+<h3>Page 23-24</h3>
+<a href="../images/BOOK-2/page-23-24.jpg">
+<img  src="../images/BOOK-2/page-23-24.jpg" width=90% ALT="Page 23-24">
+</a>
+
+<br>
+<h3>Page 25-26</h3>
+<a href="../images/BOOK-2/page-25-26.jpg">
+<img  src="../images/BOOK-2/page-25-26.jpg" width=90% ALT="Page 25-26">
+</a>
+
+<br>
+<h3>Page 27</h3>
+<a href="../images/BOOK-2/page-27-00.jpg">
+<img  src="../images/BOOK-2/page-27-00.jpg" width=90% ALT="Page 27">
+</a>
+
+</center>
+
+<br><br><br>
+
+</body>
+
+</html>
+
