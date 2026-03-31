@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /DOCUMENTS/
+Disallow: /docs/
 Disallow: /LOGBOOK/
 Disallow: Gliding-Years.html
