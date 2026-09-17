@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<html>
+
+<head>
+
+<!-- allows embedding in most modern browsers. -->
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors *">
+
+<link rel="stylesheet" type="text/css" href="..\styles\generalstyles.css">
+
+<title>Mary Weaving</title>
+
+<script language="JavaScript">
+
+function popup(FILE, FEATURES) { 
+    CONTENT = "<HTML><HEAD><TITLE>Enlarged image</TITLE></HEAD>" +
+              "<BODY><CENTER><FORM><INPUT TYPE='BUTTON' VALUE='Close'" +
+               "onClick='window.close()'></FORM><P><IMG SRC='" + FILE + 
+               "' BORDER=0>" + "</CENTER>"+ "</BODY></HTML>";
+              pop = window.open("","",FEATURES);
+              pop.document.open();
+              pop.focus();
+              pop.document.write(CONTENT);
+              pop.document.close();
+
+} 
+
+
+function view (imagefile) { 
+   var winShell
+   var atext, btext, ctext;
+   var fso;
+   var quoteS = String.fromCharCode(34);
+
+   atext=self.location.href; // the current page path
+   fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   btext = fso.GetParentFolderName(atext); // path without the page name
+   delete(fso);
+
+   atext = quoteS + "\\" + btext + exefile  + quoteS; // add the image relative path and put in quotes
+   atext = atext.replace( /\//g, '\\' ); // make sure the slashes are the right way round
+   ctext = "btext = " + btext + " atext = " + atext;
+   // alert(ctext);
+
+   atext = "rundll32.exe %SystemRoot%\system32\shimgvw.dll,ImageView_Fullscreen";
+   // add the image path
+   atext = atext + "\\" + imagefile;
+   alert(text);
+
+   // Run the given executable
+   winShell = new ActiveXObject("WScript.Shell");
+   // winShell.Run(atext);
+   delete(winShell);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<br>
+<H1><CENTER>Mary Weaving</CENTER></H1>
+
+<center>
+<a href="Mount-Gillen.jpg">
+<img src="Mount-Gillen.jpg" style="width:50%; height:auto;" alt="Mount Gillen">
+</a> 
+</center>
+
+<p style="text-align:center;">
+Mount Gillen near Alice Springs, in the Macdonnell Ranges.
+<br><br>
+Mary's <a href="https://www.findagrave.com/memorial/184434015/mary-weaving" target="_blank">grave marker</a> is in the <a href="https://www.alicesprings.nt.gov.au/Profiles/alicesprings/Assets/ClientData/Memorial_Cemetery_Spreadsheet_by_Names.pdf" target="_blank">Alice Springs Memorial Cemetery</a>.
+<br>
+In her memory, there is now a Weaving Court within<br>the Carmichael Estate area of Alice Springs. 
+<br><br>
+</p>
+
+<center>
+<a href="Weaving headstone.jpg">
+<img src="Weaving headstone.jpg" style="width:30%; height:auto;" alt="Mount Gillen">
+</a> 
+</center>
+
+<p style="text-align:center; font-size: 1.25rem; font-weight: 500;">
+
+To the memory of Mary Weaving<br>
+Killed when her glider crashed on Mt Gillen<br>
+26 NOV 1963
+<br><br>
+<i>
+An opal hearted country<br>
+A wilful lavish land<br>
+All you who have not loved her<br>
+you will not understand<br>
+Though earth holds many splendours<br>
+wherever I may die<br>
+I know to what brown country<br>
+my homing heart will ...<br>
+FLY
+</i>
+</p>
+
+<br>
+</center>
+
+<br><br><br>
+
+<br><br><br>
+
+</body>
+
+</html>
